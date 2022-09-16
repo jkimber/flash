@@ -12,10 +12,15 @@
   display: contents;
 }
 
+.Footer {
+  padding-bottom: 30px;
+}
+
 .Toolbar {
   font-size: calc(10px + 2vmin);
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 30px;
 }
 
 .Toolbar > label {
@@ -23,10 +28,12 @@
 }
 
 .App-button {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  width: 250px;
+  width: 180px;
   height: 45px;
+}
+
+.App-button:not(:last-of-type) {
+  margin-right: 5px;
 }
 
 .Reveal {
