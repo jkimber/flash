@@ -71,5 +71,20 @@ export const data = [
   ["Berberis thunbergii", "japanese barberry"],
   ["Euonymous japonicus", "evergreen spindle"],
   ["Pinus sylvestris", "scots pine"],
-  ["Cotoneaster bullatus", "hollyberry cotoneaster"]
+  ["Cotoneaster bullatus", "hollyberry cotoneaster"],
+  ["Allium giganteum", "giant onion"],
+  ["Coriandrum sativum", "coriander,chinese parsley,cilantro"],
+  ["Sambucus negra", "common elder"],
+  ["Myosotis sylvatica", "garden forget-me-not"],
+  ["Syringa vulgaris", "common lilac"],
+  ["Helianthus annuus", "common sunflower"],
+  ["Phlomis fruiticosa", "jerusalem sage"],
+  ["Pisum sativum", "garden pea"],
+  ["papaver somniforum", "opium poppy"],
+  ["Aquelegia vulgaris", "common columbine,granny's bonnets"],
+  ["Acer campestre", "field maple"],
+  ["Juglans regia", "common walnut"],
+  ["Sorbus acuparia", "rowan,mountain ash"],
+  ["Aesculus hippocastanum", "horse chestnut"],
+  ["Enkianthus campanulatus", "redvein enkianthus"]
 ]
