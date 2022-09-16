@@ -1,4 +1,6 @@
-export const data = [
+export const getData = () => data.map(d => [d[0], d[1].split(',')]);
+
+const data = [
   ["Vinca minor", "lesser periwinkle,dwarf periwinkle"],
   [
     "Vinca major",

@@ -12,7 +12,6 @@ code {
     monospace;
 }
 
-button {
-  width: 250px;
-  height: 45px;
+p {
+  margin: 0;
 }

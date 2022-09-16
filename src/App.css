@@ -1,46 +1,36 @@
 .App {
   text-align: center;
   min-height: 100vh;
-  background-color: #282c34;
+  background-color: #424853;
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .Main {
-  font-size: calc(14px + 2vmin);
+  font-size: calc(18px + 2vmin);
   display: contents;
 }
 
 .Toolbar {
   font-size: calc(10px + 2vmin);
-  width: 100vw;
-  display:flex;
+  display: flex;
   justify-content: space-evenly;
 }
 
 .Toolbar > label {
-  min-width: 150px;
+  min-width: 160px;
 }
 
 .App-button {
   margin-top: 30px;
   margin-bottom: 20px;
+  width: 250px;
+  height: 45px;
 }
 
-.Footer {
+.Reveal {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
-  width: calc(100vw - 22px);
-  min-height: 200px;
-  margin-top: 10px;
-  border: 1px dotted grey;
-  justify-content: flex-end;
-  align-items: flex-end;
-  color: grey;
-  padding: 10px;
-  font-style: italic;
-  margin-top: 30px;
 }
