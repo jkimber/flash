@@ -34,6 +34,7 @@ function App() {
         <Card
           binomial={data.length > 0 && data.includes(item) ? item[0] : ""}
           common={data.length > 0 && data.includes(item) ? item[1] : [""]}
+          imgFilename={data.length > 0 && data.includes(item) ? item[2] : ""}
           toggle={toggle}
           onClick={() => setToggle(!toggle)} />
       </main>

@@ -16,3 +16,9 @@ p {
   margin: 0;
   padding-bottom: 10px;
 }
+
+img {
+  display: flex;
+  align-self: center;
+  height: 250px;
+}

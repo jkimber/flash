@@ -4,3 +4,12 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.Card-Text {
+  margin-top: 30px;
+  min-height: 300px;
+}
+
+.Card-EmptyImage {
+  height: 250px;
+}
