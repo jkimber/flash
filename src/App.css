@@ -24,7 +24,7 @@
 }
 
 .Toolbar > label {
-  min-width: 160px;
+  min-width: 100px;
 }
 
 .App-button {

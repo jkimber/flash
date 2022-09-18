@@ -9,7 +9,7 @@ function App() {
   const [item, setItem] = React.useState(data[0])
   const [toggle, setToggle] = React.useState(false)
   const [binomialFirst, setBinomialFirst] = React.useState(true)
-
+  const [pictureToggle, setPictureToggle] = React.useState(true)
 
   const getNext = () => {
     const randomInteger = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
@@ -36,11 +36,12 @@ function App() {
           common={data.length > 0 && data.includes(item) ? item[1] : [""]}
           imgFilename={data.length > 0 && data.includes(item) ? item[2] : ""}
           toggle={toggle}
+          togglePicture={pictureToggle}
           onClick={() => setToggle(!toggle)} />
       </main>
       <footer className="Footer">
         <div className="Toolbar">
-          <label htmlFor="binomial">Binomial first
+          <label htmlFor="binomial">Binomial
             <input
               type="radio"
               name="direction"
@@ -49,7 +50,7 @@ function App() {
               checked={binomialFirst}
               onChange={() => setBinomialFirst(true)} />
           </label>
-          <label htmlFor="common">Common first
+          <label htmlFor="common">Common
             <input
               type="radio"
               name="direction"
@@ -57,6 +58,14 @@ function App() {
               id="common"
               checked={!binomialFirst}
               onChange={() => setBinomialFirst(false)} />
+          </label>
+          <label htmlFor="common">Picture
+            <input
+              type="checkbox"
+              name="picture"
+              id="picture"
+              checked={pictureToggle}
+              onChange={() => setPictureToggle(!pictureToggle)} />
           </label>
         </div>
         <input
