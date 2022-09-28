@@ -11,5 +11,7 @@
 }
 
 .Card-EmptyImage {
-  height: 250px;
+  height: 320px;
+  width: 320px;
+  margin-top: 20px;
 }
