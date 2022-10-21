@@ -1,11 +1,12 @@
+import { PictureType } from '../Pages/Flash';
 import './Card.css';
 
 interface CardProps {
     binomialName: string;
     commonNames: string[];
-    imageFilename: string;
+    imageFilename?: string;
     onClick: () => void;
-    showPicture: boolean;
+    showPicture?: PictureType;
     toggleNames: boolean;
 }
 
@@ -21,7 +22,7 @@ export const Card = ({
         className="Card"
         onClick={onClick}
     >
-        {showPicture && (
+        {showPicture === 'Image' && (
             <img
                 alt={imageFilename}
                 src={
@@ -33,10 +34,16 @@ export const Card = ({
                 }
             />
         )}
-        {!showPicture && <div className="Card-EmptyImage"></div>}
+        {showPicture === 'ImagePlaceholder' && (
+            <div className="Card-EmptyImage"></div>
+        )}
         <div className="Card-Text">
             {toggleNames ? (
-                commonNames.map(name => <p key={name}>{name}</p>)
+                Array.isArray(commonNames) ? (
+                    commonNames.map(name => <p key={name}>{name}</p>)
+                ) : (
+                    <p key={commonNames}>{commonNames}</p>
+                )
             ) : (
                 <p>{binomialName}</p>
             )}

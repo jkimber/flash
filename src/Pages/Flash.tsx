@@ -1,13 +1,20 @@
 import { useState } from 'react';
 import { Card } from '../Components/Card';
+import { FlashType } from '../constants';
 import { getData } from '../data';
 
-const Binomial = () => {
-    const [data, setData] = useState(getData());
+export type PictureType = 'Image' | 'ImagePlaceholder' | 'None';
+
+interface GlossaryProps {
+    dataType: FlashType;
+}
+
+const Glossary = ({ dataType }: GlossaryProps) => {
+    const [data, setData] = useState(getData(dataType));
     const [item, setItem] = useState(data[0]);
     const [toggle, setToggle] = useState(false);
     const [binomialFirst, setBinomialFirst] = useState(true);
-    const [pictureToggle, setPictureToggle] = useState(true);
+    const [pictureToggle, setPictureToggle] = useState<PictureType>('Image');
 
     const getNext = () => {
         const randomInteger = (min: number, max: number) =>
@@ -40,18 +47,13 @@ const Binomial = () => {
                         ? (item[1] as string[])
                         : ['']
                 }
-                imageFilename={
-                    data.length > 0 && data.includes(item)
-                        ? (item[2] as string)
-                        : ''
-                }
                 toggleNames={toggle}
-                showPicture={pictureToggle}
+                showPicture={dataType === 'Glossary' ? 'None' : pictureToggle}
                 onClick={() => setToggle(!toggle)}
             />
             <div className="Toolbar">
                 <label htmlFor="binomial">
-                    Binomial
+                    {dataType === 'Glossary' ? 'Term' : 'Binomial'}
                     <input
                         type="radio"
                         name="direction"
@@ -62,7 +64,7 @@ const Binomial = () => {
                     />
                 </label>
                 <label htmlFor="common">
-                    Common
+                    {dataType === 'Glossary' ? 'Description' : 'Common'}
                     <input
                         type="radio"
                         name="direction"
@@ -72,16 +74,24 @@ const Binomial = () => {
                         onChange={() => setBinomialFirst(false)}
                     />
                 </label>
-                <label htmlFor="common">
-                    Picture
-                    <input
-                        type="checkbox"
-                        name="picture"
-                        id="picture"
-                        checked={pictureToggle}
-                        onChange={() => setPictureToggle(!pictureToggle)}
-                    />
-                </label>
+                {dataType === 'Binomial' && (
+                    <label htmlFor="picture">
+                        Picture
+                        <input
+                            type="checkbox"
+                            name="picture"
+                            id="picture"
+                            checked={pictureToggle === 'Image'}
+                            onChange={() =>
+                                setPictureToggle(
+                                    pictureToggle === 'Image'
+                                        ? 'ImagePlaceholder'
+                                        : 'Image'
+                                )
+                            }
+                        />
+                    </label>
+                )}
             </div>
             <footer className="Footer">
                 <input
@@ -104,6 +114,5 @@ const Binomial = () => {
             </footer>
         </main>
     );
-}
-
-export default Binomial;
+};
+export default Glossary;

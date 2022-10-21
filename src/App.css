@@ -1,70 +1,70 @@
 .App {
-  text-align: center;
-  min-height: 100vh;
-  background-color: #424853;
-  color: white;
-  display: flex;
-  flex-direction: column;
+    text-align: center;
+    min-height: 100vh;
+    background-color: #424853;
+    color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .Main {
-  font-size: calc(18px + 2vmin);
-  display: contents;
+    font-size: calc(18px + 2vmin);
+    display: contents;
 }
 
 .Footer {
-  padding-bottom: 30px;
+    padding-bottom: 30px;
 }
 
 .Toolbar {
-  font-size: calc(10px + 2vmin);
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 30px;
+    font-size: calc(10px + 2vmin);
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
 }
 
 .Toolbar > label {
-  min-width: 100px;
+    min-width: 100px;
 }
 
 .App-button {
-  width: 180px;
-  height: 45px;
+    width: 180px;
+    height: 45px;
 }
 
 .App-button:not(:last-of-type) {
-  margin-right: 5px;
+    margin-right: 5px;
 }
 
 .Reveal {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
 }
 
 a,
 a:visited {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-grow: 1;
-  color: inherit;
-  text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    color: inherit;
+    text-decoration: none;
 }
 
 ul {
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-  padding: 0;
-  list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 0;
+    list-style-type: none;
 }
 
 li {
-  display: flex;
-  flex-grow: 1;
-  min-height: 120px;
-  margin-top: 20px;
-  border: 1px solid grey;
-  border-radius: 10px;
+    display: flex;
+    flex-grow: 1;
+    min-height: 120px;
+    margin-top: 20px;
+    border: 1px solid grey;
+    border-radius: 10px;
 }

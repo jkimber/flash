@@ -1,25 +1,29 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { paths } from './constants'
-import Menu from './Components/Menu'
-import Binomial from './Pages/Binomial'
-import Family from './Pages/Family'
-import Glossary from './Pages/Glossary'
-import Five from './Pages/Five'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { paths } from './constants';
+import Menu from './Components/Menu';
+import Flash from './Pages/Flash';
 
 import './App.css';
 
 export default function App() {
     return (
         <div className="App">
-             <Router>
+            <Router>
                 <Routes>
-                    <Route path='/flash' element={<Menu />} /> 
-                    <Route path={`/flash/${paths.binomial}`} element={<Binomial />} />
-                    <Route path={`/flash/${paths.family}`} element={<Family />} />
-                    <Route path={`/flash/${paths.glossary}`} element={<Glossary />} />
-                    <Route path={`/flash/${paths.five}`} element={<Five />} />
+                    <Route
+                        path="/flash"
+                        element={<Menu />}
+                    />
+                    <Route
+                        path={`/flash/${paths.binomial}`}
+                        element={<Flash dataType="Binomial" />}
+                    />
+                    <Route
+                        path={`/flash/${paths.glossary}`}
+                        element={<Flash dataType="Glossary" />}
+                    />
                 </Routes>
-            </Router> 
+            </Router>
         </div>
     );
 }
