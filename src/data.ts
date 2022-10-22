@@ -20,7 +20,7 @@ const GlossaryData = [
     ],
     [
         'respiration',
-        'Process that utilises complex carbohydrates, most commonly in the presence of oxygen, to release energy (ATP) with water vapour and carbon dioxide as waste products (and ethanol if anaerobic respiration)',
+        'Process that utilises complex carbohydrates, most commonly in the presence of oxygen, to release energy (ATP) with water vapour and carbon dioxide as waste products (and ethanol if anaerobic)',
     ],
 ];
 
