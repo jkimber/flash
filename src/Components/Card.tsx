@@ -22,6 +22,17 @@ export const Card = ({
         className="Card"
         onClick={onClick}
     >
+        <div className="Card-Text">
+            {toggleNames ? (
+                Array.isArray(commonNames) ? (
+                    commonNames.map(name => <p key={name}>{name}</p>)
+                ) : (
+                    <p key={commonNames}>{commonNames}</p>
+                )
+            ) : (
+                <p>{binomialName}</p>
+            )}
+        </div>
         {showPicture === 'Image' && (
             <img
                 alt={imageFilename}
@@ -37,16 +48,5 @@ export const Card = ({
         {showPicture === 'ImagePlaceholder' && (
             <div className="Card-EmptyImage"></div>
         )}
-        <div className="Card-Text">
-            {toggleNames ? (
-                Array.isArray(commonNames) ? (
-                    commonNames.map(name => <p key={name}>{name}</p>)
-                ) : (
-                    <p key={commonNames}>{commonNames}</p>
-                )
-            ) : (
-                <p>{binomialName}</p>
-            )}
-        </div>
     </div>
 );

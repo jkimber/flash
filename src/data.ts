@@ -7,21 +7,48 @@ export const getData = (flashType: FlashType) =>
 
 const GlossaryData = [
     [
-        'petiole',
-        'Where it is present in a plant, it attaches the leaf blade (lamina) of some plants to a stem',
-    ],
-    [
-        'axillary bud',
-        'Forming in the axil join between leaf and stem, a form of lateral bud and can develop into stem and flower shoots',
-    ],
-    [
-        'perrenation',
-        'The storage of food within a plant structure (eg tuber, corm, rhizome) to allow the plant to survive from one season to another (eg overwintering)',
-    ],
-    [
-        'respiration',
-        'Process that utilises complex carbohydrates, most commonly in the presence of oxygen, to release energy (ATP) with water vapour and carbon dioxide as waste products (and ethanol if anaerobic)',
-    ],
+        "petiole",
+        "Where it is present in a plant, it attaches the leaf blade (lamina) of some plants to a stem"
+      ],
+      [
+        "axillary bud",
+        "Forming in the axil join between leaf and stem, a form of lateral bud and can develop into stem and flower shoots"
+      ],
+      [
+        "perrenation",
+        "The storage of food within a plant structure (eg tuber, corm, rhizome) to allow the plant to survive from one season to another (eg overwintering)"
+      ],
+      [
+        "respiration",
+        "Process that utilises complex carbohydrates, most commonly in the presence of oxygen, to release energy (ATP) with water vapour and carbon dioxide as waste products (and ethanol if anaerobic)"
+      ],
+      ["biotic impact", "pest and disease disorders"],
+      ["abiotic impact", "non-living disorders. eg environment, nutrition"],
+      ["rose balling", "wet flowers failing to open"],
+      [
+        "frost damage",
+        "distortion or blackening of flowers, buds, shoots, leaves.  cracked cambium"
+      ],
+      ["frost lift (heave)", "root lift due to frost-thaw cycles"],
+      [
+        "advection",
+        "the transference of heat energy in a horizontal stream of gas, esp of air"
+      ],
+      [
+        "blossom end rot",
+        "lack of calcium uptake due to inconsistent water supply (tomatoes)"
+      ],
+      [
+        "bitter pit",
+        "lack of calcium uptake due to inconsistent water supply (apples)"
+      ],
+      ["etiolated", "grown in absence of light.  lacking chlorophyll"],
+      ["pneumatophores", "snorkel roots to enable air (oxygen) intake"],
+      [
+        "fasciation",
+        "seemingly random mutations resulting in bands, bundles, flattening, fusing"
+      ],
+      ["tetraploid", "4 sets of chromosomes instead of usual 2"]
 ];
 
 const BinomialData = [
@@ -31,71 +58,29 @@ const BinomialData = [
       "bigleaf periwinkle,large periwinkle,greater periwinkle,blue periwinkle"
     ],
     ["Digitalis purpurea", "common foxglove"],
-    ["Campanula rotundifolia", "common harebell"],
-    ["Betula utilis ssp. jacquemonti", "west himalayan birch"],
-    ["Rosa chinensis", "china rose,chinese rose,bengal rose"],
-    ["Brassica oleracea var. italica", "broccoli"],
     ["Lamium orvala", "balm-leaved red deadnettle"],
-    ["Achillea millefolium", "common yarrow"],
-    ["Cucumis sativus", "cucumber"],
     ["Tagetes patula", "french marigold"],
     ["Ginkgo biloba", "maidenhair tree"],
     ["Quercus robur", "common oak"],
     ["Rudbeckia hirta", "black-eyed susan"],
     ["Cirsium arvense", "creeping thistle,spear thistle"],
     ["Fallopia japonica", "japanese knotweed"],
-    ["Acanthus mollis", "common bear's breech,bear's breeches"],
-    ["Marchantia polymorpha", "liverwort"],
     ["Equisetum arvense", "common horsetail"],
-    ["Sequoia gigantea", "giant redwood"],
-    ["Cycas revoluta", "japanese sago plant"],
-    ["Phalaenopsis schilleriana", "schiller's moth orchid"],
-    ["Phaseolus vulgaris", "common bean,french bean"],
-    ["Fritillaria  meleagris", "snake's head fritillary,chequered lily"],
-    ["Magnolia grandiflora", "evergreen magnolia,large-flowered magnolia"],
-    ["Hosta plantaginea", "fragrant plantain lily"],
-    ["Rosa gallica", "gallic rose,french rose,rose of provins"],
-    ["Hedera helix", "common ivy"],
-    ["Senecio vulgaris", "birdseed,groundsel"],
-    ["Stellaria media", "common chickweed"],
-    ["Cardamine hirsuta", "hairy bittercress,lamb's cress"],
     ["Fagus sylvatica", "common beech"],
-    ["Capsella bursa-pastoris", "shepard's purse,witches pouches"],
-    ["Calendula officinalis", "common marigold,pot marigold"],
-    ["Nigella damascena", "love-in-a-mist"],
-    ["Lamium purpurea", "french nettle,red deadnettle"],
     ["Euphorbia helioscopa", "sun spurge,cat's milk"],
-    ["Matricaria perforata", "false chamomile"],
-    ["Sonchus asper", "prickly sowthistle"],
     ["Alcea rosea", "hollyhock"],
     ["Dianthus barbatus", "sweet william"],
-    ["Daucus carota", "wild carrot"],
-    ["Beta vulgaris", "common beet"],
     ["Dipsacus fullonum", "common teasel,barber's brushes"],
     ["Erysimum cheiri", "common wallflower,bleeding heart"],
     [
       "Senecio jacobaea",
-      "common ragwort,binweed,ragweed,stinking willy,st james's wort"
+      "common ragwort,ragweed,stinking willy,st james's wort"
     ],
-    ["Cirsium vulagre", "spear thistle"],
+    ["Cirsium vulgare", "spear thistle"],
     ["Arctium minus", "lesser burdock"],
-    ["Taraxacum officianales", "dandelion,pee in the bed"],
-    ["Rubus fruticosus", "blackberry,bramble"],
-    ["Fraxinus excelsior", "common ash"],
-    ["Acer pseudoplatanus", "sycamore"],
-    ["Eschscholzia californica", "californian poppy"],
-    ["Centaurea cyanus", "cornflower"],
     ["Lathyrus odoratus", "sweet pea"],
-    ["Limnanthes douglasii", "poached-egg plant"],
-    ["Cucurbita pepo", "marrow pumpkin,marrow,courgette"],
-    ["Ageratum altissimum", "white snakeroot"],
-    ["Cosmos bipinnatus 'Daydream'", "cosmea daydream"],
-    ["Coleus scutellarioides", "painted nettle"],
-    ["Myrtus communis", "common myrtle"],
-    ["Prunus laurocerasus", "cherry laurel"],
-    ["Philadelphus coronarius", "common mock orange"],
     ["Berberis thunbergii", "japanese barberry"],
-    ["Euonymous japonicus", "evergreen spindle"],
+    ["Euonymus japonicus", "evergreen spindle"],
     ["Pinus sylvestris", "scots pine"],
     ["Cotoneaster bullatus", "hollyberry cotoneaster"],
     ["Allium giganteum", "giant onion"],
@@ -103,8 +88,7 @@ const BinomialData = [
     ["Sambucus nigra", "common elder"],
     ["Myosotis sylvatica", "garden forget-me-not"],
     ["Syringa vulgaris", "common lilac"],
-    ["Helianthus annuus", "common sunflower"],
-    ["Phlomis fruiticosa", "jerusalem sage"],
+    ["Phlomis fruticosa", "jerusalem sage"],
     ["Pisum sativum", "garden pea"],
     ["papaver somniferum", "opium poppy"],
     ["Aquilegia vulgaris", "common columbine,granny's bonnets"],
@@ -117,5 +101,8 @@ const BinomialData = [
     ["Solanum lycopersicum", "tomato"],
     ["Lavandula augustifolia", "english lavender,common lavender"],
     ["Sequoia sempervirens", "coastal redwood"],
-    ["Euphorbia lathyris", "caper spurge,mole plant"]
+    ["Euphorbia lathyris", "caper spurge,mole plant"],
+    ["Coleus caninus", "scat,scaredy cat"],
+    ["Sedum rosea", "dark purple stonecrop,roseroot"],
+    ["Betula nigra", "black birch"]
 ];
