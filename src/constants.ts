@@ -1,10 +1,9 @@
 export const paths = {
     binomial: 'binomial',
-    family: 'family',
     glossary: 'glossary',
-    five: 'five',
+    nutrient: 'nutrient',
 };
 
-export type FlashType = 'Binomial' | 'Glossary';
+export type FlashType = 'Binomial' | 'Glossary' | 'Nutrient';
 
 export const linkPath = (path: string) => `/flash/${path}`;

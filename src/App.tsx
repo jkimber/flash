@@ -22,6 +22,10 @@ export default function App() {
                         path={`/flash/${paths.glossary}`}
                         element={<Flash dataType="Glossary" />}
                     />
+                    <Route
+                        path={`/flash/${paths.nutrient}`}
+                        element={<Flash dataType="Nutrient" />}
+                    />
                 </Routes>
             </Router>
         </div>

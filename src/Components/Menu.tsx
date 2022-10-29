@@ -17,6 +17,11 @@ const Menu = () => (
                     {toTitleCase(paths.glossary)}
                 </Link>
             </li>
+            <li>
+                <Link to={`${linkPath(paths.nutrient)}`}>
+                    {toTitleCase(paths.nutrient)}
+                </Link>
+            </li>
         </ul>
     </nav>
 );

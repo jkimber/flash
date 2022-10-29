@@ -33,20 +33,22 @@ export const Card = ({
                 <p>{binomialName}</p>
             )}
         </div>
-        {showPicture === 'Image' && (
-            <img
-                alt={imageFilename}
-                src={
-                    process.env.PUBLIC_URL +
-                    '/img/' +
-                    binomialName.split(' ')[0] +
-                    '_' +
-                    binomialName.split(' ')[1]
-                }
-            />
-        )}
-        {showPicture === 'ImagePlaceholder' && (
-            <div className="Card-EmptyImage"></div>
-        )}
+        <div className="Card-Image">
+            {showPicture === 'Image' && (
+                <img
+                    alt={imageFilename}
+                    src={
+                        process.env.PUBLIC_URL +
+                        '/img/' +
+                        binomialName.split(' ')[0] +
+                        '_' +
+                        binomialName.split(' ')[1]
+                    }
+                />
+            )}
+            {showPicture === 'ImagePlaceholder' && (
+                <div className="Card-EmptyImage"></div>
+            )}
+        </div>
     </div>
 );

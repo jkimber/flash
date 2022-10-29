@@ -5,11 +5,11 @@ import { getData } from '../data';
 
 export type PictureType = 'Image' | 'ImagePlaceholder' | 'None';
 
-interface GlossaryProps {
+interface FlashProps {
     dataType: FlashType;
 }
 
-const Glossary = ({ dataType }: GlossaryProps) => {
+const Flash = ({ dataType }: FlashProps) => {
     const [data, setData] = useState(getData(dataType));
     const [item, setItem] = useState(data[0]);
     const [toggle, setToggle] = useState(false);
@@ -44,16 +44,23 @@ const Glossary = ({ dataType }: GlossaryProps) => {
                 }
                 commonNames={
                     data.length > 0 && data.includes(item)
-                        ? (item[1] as string[])
+                        ? dataType === 'Nutrient' ?
+                             ([
+                                  `${item[1]}`,
+                                  <br />,
+                                  `Role: ${item[2]}`,
+                                  <br />,
+                                  `Deficiency: ${item[3]}`
+                              ] as string[]) : item[1] as string[]
                         : ['']
                 }
                 toggleNames={toggle}
-                showPicture={dataType === 'Glossary' ? 'None' : pictureToggle}
+                showPicture={dataType === 'Binomial' ? pictureToggle : 'None'}
                 onClick={() => setToggle(!toggle)}
             />
             <div className="Toolbar">
                 <label htmlFor="binomial">
-                    {dataType === 'Glossary' ? 'Term' : 'Binomial'}
+                    {dataType === 'Glossary' ? 'Term' : dataType}
                     <input
                         type="radio"
                         name="direction"
@@ -64,7 +71,7 @@ const Glossary = ({ dataType }: GlossaryProps) => {
                     />
                 </label>
                 <label htmlFor="common">
-                    {dataType === 'Glossary' ? 'Description' : 'Common'}
+                    {dataType === 'Binomial' ? 'Common' : 'Description'}
                     <input
                         type="radio"
                         name="direction"
@@ -115,4 +122,5 @@ const Glossary = ({ dataType }: GlossaryProps) => {
         </main>
     );
 };
-export default Glossary;
+
+export default Flash;
