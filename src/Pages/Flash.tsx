@@ -10,16 +10,16 @@ interface FlashProps {
 }
 
 const Flash = ({ dataType }: FlashProps) => {
+    const randomInteger = (min: number, max: number) =>
+        Math.floor(Math.random() * (max - min + 1)) + min;
+
     const [data, setData] = useState(getData(dataType));
-    const [item, setItem] = useState(data[0]);
+    const [item, setItem] = useState(data[randomInteger(0, data.length - 1)]);
     const [toggle, setToggle] = useState(false);
     const [binomialFirst, setBinomialFirst] = useState(true);
     const [pictureToggle, setPictureToggle] = useState<PictureType>('Image');
 
     const getNext = () => {
-        const randomInteger = (min: number, max: number) =>
-            Math.floor(Math.random() * (max - min + 1)) + min;
-
         let next = data[randomInteger(0, data.length - 1)];
         while (next[0] === item[0] && data.length > 1) {
             next = data[randomInteger(0, data.length - 1)];
@@ -34,27 +34,35 @@ const Flash = ({ dataType }: FlashProps) => {
         getNext();
     };
 
+    const cardText = toggle ? (
+        Array.isArray(item[1]) ? (
+            item[1].map(item => <p key={item}>{item}</p>)
+        ) : dataType === 'Nutrient' ? (
+            <p>
+                {`${item[1]} nutrient`}
+                <br />
+                <br />
+                {`Role: ${item[2]}`}
+                <br />
+                <br />
+                {`Deficiency: ${item[3]}`}
+            </p>
+        ) : (
+            <p key={item[1]}>{item[1]}</p>
+        )
+    ) : (
+        <p>{item[0]}</p>
+    );
+
     return (
         <main className="Main">
             <Card
-                binomialName={
+                term={
                     data.length > 0 && data.includes(item)
                         ? (item[0] as string)
                         : ''
                 }
-                commonNames={
-                    data.length > 0 && data.includes(item)
-                        ? dataType === 'Nutrient' ?
-                             ([
-                                  `${item[1]}`,
-                                  <br />,
-                                  `Role: ${item[2]}`,
-                                  <br />,
-                                  `Deficiency: ${item[3]}`
-                              ] as string[]) : item[1] as string[]
-                        : ['']
-                }
-                toggleNames={toggle}
+                cardText={cardText}
                 showPicture={dataType === 'Binomial' ? pictureToggle : 'None'}
                 onClick={() => setToggle(!toggle)}
             />

@@ -1,54 +1,45 @@
+import { ReactNode } from 'react';
 import { PictureType } from '../Pages/Flash';
 import './Card.css';
 
 interface CardProps {
-    binomialName: string;
-    commonNames: string[];
-    imageFilename?: string;
+    term: string;
+    cardText: ReactNode;
     onClick: () => void;
     showPicture?: PictureType;
-    toggleNames: boolean;
 }
 
-export const Card = ({
-    binomialName,
-    toggleNames,
-    showPicture,
-    imageFilename,
-    commonNames,
-    onClick,
-}: CardProps) => (
-    <div
-        className="Card"
-        onClick={onClick}
-    >
-        <div className="Card-Text">
-            {toggleNames ? (
-                Array.isArray(commonNames) ? (
-                    commonNames.map(name => <p key={name}>{name}</p>)
-                ) : (
-                    <p key={commonNames}>{commonNames}</p>
-                )
-            ) : (
-                <p>{binomialName}</p>
+export const Card = ({ term, showPicture, cardText, onClick }: CardProps) => {
+    const imageFilename = term.split(' ')[0] + '_' + term.split(' ')[1];
+
+    return term ? (
+        <div
+            className="Card"
+            onClick={onClick}
+        >
+            {showPicture !== 'None' && (
+                <div className="Card-Image">
+                    {showPicture === 'Image' && (
+                        <img
+                            alt={imageFilename}
+                            src={
+                                process.env.PUBLIC_URL + '/img/' + imageFilename
+                            }
+                        />
+                    )}
+                    {showPicture === 'ImagePlaceholder' && (
+                        <div className="Card-EmptyImage"></div>
+                    )}
+                </div>
             )}
+            <div className="Card-Text">{cardText}</div>
         </div>
-        <div className="Card-Image">
-            {showPicture === 'Image' && (
-                <img
-                    alt={imageFilename}
-                    src={
-                        process.env.PUBLIC_URL +
-                        '/img/' +
-                        binomialName.split(' ')[0] +
-                        '_' +
-                        binomialName.split(' ')[1]
-                    }
-                />
-            )}
-            {showPicture === 'ImagePlaceholder' && (
-                <div className="Card-EmptyImage"></div>
-            )}
+    ) : (
+        <div
+            className="Card"
+            onClick={() => {}}
+        >
+            All done!
         </div>
-    </div>
-);
+    );
+};
