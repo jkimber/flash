@@ -60,10 +60,6 @@ li {
     margin-bottom: 20px;
 }
 
-.Toolbar > label {
-    min-width: 100px;
-}
-
 .Toolbar > label > input {
     margin-left: 5px;
 }

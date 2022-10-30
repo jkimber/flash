@@ -18,6 +18,7 @@ const Flash = ({ dataType }: FlashProps) => {
     const [toggle, setToggle] = useState(false);
     const [binomialFirst, setBinomialFirst] = useState(true);
     const [pictureToggle, setPictureToggle] = useState<PictureType>('Image');
+    const [textToggle, setTextToggle] = useState(true);
 
     const getNext = () => {
         let next = data[randomInteger(0, data.length - 1)];
@@ -64,6 +65,7 @@ const Flash = ({ dataType }: FlashProps) => {
                 }
                 cardText={cardText}
                 showPicture={dataType === 'Binomial' ? pictureToggle : 'None'}
+                showText={textToggle}
                 onClick={() => setToggle(!toggle)}
             />
             <div className="Toolbar">
@@ -90,22 +92,38 @@ const Flash = ({ dataType }: FlashProps) => {
                     />
                 </label>
                 {dataType === 'Binomial' && (
-                    <label htmlFor="picture">
-                        Picture
-                        <input
-                            type="checkbox"
-                            name="picture"
-                            id="picture"
-                            checked={pictureToggle === 'Image'}
-                            onChange={() =>
-                                setPictureToggle(
-                                    pictureToggle === 'Image'
-                                        ? 'ImagePlaceholder'
-                                        : 'Image'
-                                )
-                            }
-                        />
-                    </label>
+                    <>
+                        <label htmlFor="text">
+                            Text
+                            <input
+                                type="checkbox"
+                                name="text"
+                                id="text"
+                                checked={textToggle}
+                                onChange={() =>
+                                    setTextToggle(
+                                        !textToggle
+                                    )
+                                }
+                            />
+                        </label>
+                        <label htmlFor="picture">
+                            Picture
+                            <input
+                                type="checkbox"
+                                name="picture"
+                                id="picture"
+                                checked={pictureToggle === 'Image'}
+                                onChange={() =>
+                                    setPictureToggle(
+                                        pictureToggle === 'Image'
+                                            ? 'ImagePlaceholder'
+                                            : 'Image'
+                                    )
+                                }
+                            />
+                        </label>
+                    </>
                 )}
             </div>
             <footer className="Footer">

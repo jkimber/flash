@@ -7,9 +7,10 @@ interface CardProps {
     cardText: ReactNode;
     onClick: () => void;
     showPicture?: PictureType;
+    showText: boolean;
 }
 
-export const Card = ({ term, showPicture, cardText, onClick }: CardProps) => {
+export const Card = ({ term, showPicture, showText, cardText, onClick }: CardProps) => {
     const imageFilename = term.split(' ')[0] + '_' + term.split(' ')[1];
 
     return term ? (
@@ -32,7 +33,7 @@ export const Card = ({ term, showPicture, cardText, onClick }: CardProps) => {
                     )}
                 </div>
             )}
-            <div className="Card-Text">{cardText}</div>
+            {showText && <div className="Card-Text">{cardText}</div>}
         </div>
     ) : (
         <div
