@@ -8,10 +8,19 @@ interface CardProps {
     onClick: () => void;
     showPicture?: PictureType;
     showText: boolean;
+    notes: string;
 }
 
-export const Card = ({ term, showPicture, showText, cardText, onClick }: CardProps) => {
-    const imageFilename = term.split(' ')[0] + '_' + term.split(' ')[1];
+export const Card = ({
+    term,
+    showPicture,
+    showText,
+    cardText,
+    notes,
+    onClick,
+}: CardProps) => {
+    const imageFilename =
+        term !== undefined ? term.split(' ')[0] + '_' + term.split(' ')[1] : '';
 
     return term ? (
         <div
@@ -33,13 +42,21 @@ export const Card = ({ term, showPicture, showText, cardText, onClick }: CardPro
                     )}
                 </div>
             )}
-            {showText && <div className="Card-Text">{cardText}</div>}
+            {showText && (
+                <div className="Card-Text">
+                    <div className="Card-Notes">
+                        {notes && notes.split(',').join(', ')}
+                    </div>
+                    {cardText}
+                </div>
+            )}
         </div>
     ) : (
         <div
             className="Card"
             onClick={() => {}}
         >
+            <br />
             All done!
         </div>
     );

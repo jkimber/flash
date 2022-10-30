@@ -22,6 +22,14 @@
     max-height: 440px;
 }
 
+.Card-Notes {
+    font-size: large;
+    padding-bottom: 5px;
+    color: antiquewhite;
+    width: 100vw;
+    min-height: 30px;
+}
+
 .Card-EmptyImage, .Card-Image > img {
     height: 100vw;
 }

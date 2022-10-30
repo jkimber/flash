@@ -57,7 +57,8 @@ li {
     font-size: calc(10px + 2vmin);
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    color: cadetblue;
 }
 
 .Toolbar > label > input {
@@ -66,12 +67,12 @@ li {
 
 .App-button {
     width: 180px;
-    height: 45px;
+    height: 40px;
     background: none;
     color: white;
     font: inherit;
     font-size: medium;
-    border: 1px solid white;
+    border: 1px solid cadetblue;
     border-radius: 5px;
 }
 

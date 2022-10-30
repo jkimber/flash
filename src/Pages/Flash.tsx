@@ -67,6 +67,7 @@ const Flash = ({ dataType }: FlashProps) => {
                 showPicture={dataType === 'Binomial' ? pictureToggle : 'None'}
                 showText={textToggle}
                 onClick={() => setToggle(!toggle)}
+                notes={dataType === 'Binomial' ? item[2] as string : ''}
             />
             <div className="Toolbar">
                 <label htmlFor="binomial">
