@@ -15,31 +15,31 @@ const NutrientData = [
     [
         'Nitrogen',
         'Mobile',
-        'Chlorophyll, protein synthesis, amino acids, healthy growth of stems and leaves',
+        'chlorophyll, protein synthesis, amino acids, healthy growth of stems and leaves',
         'poor new growth, leaf yellowing from middle outwards, fewer and smaller fruit, stunted growth',
     ],
     [
         'Phosphorous',
         'Partially mobile',
-        'protein synthesis, ATP, cell membrane, root growth, cell division, meristem tissues, protein formation, respiration',
+        'protein synthesis, ATP, cell membrane, root growth, cell division, meristem tissues, respiration',
         'purple or reddish leaf discoloration, poor growth, poor roots, early fruit drop',
     ],
     [
         'Potassium',
         'Mobile',
-        'Regulates water loss, flower growth, fruit and seed development, respiration and transpiration, accumulates in vacuole, thickens cell walls',
+        'regulates water loss, flower growth, fruit and seed development, respiration and transpiration, accumulates in vacuole, thickens cell walls',
         'Yellow leaf margins and veins, leaf roll and crinkle, lowered hardiness',
     ],
     [
         'Calcium',
         'Immobile',
-        'Cell wall formation',
+        'cell wall formation',
         'Yellow new growth, tissue death',
     ],
     [
         'Magnesium',
         'Mobile',
-        'Key component of chlorophyll, mobility of phosphorous, abundant in clay, inhibited b high potassium or calcium',
+        'key component of chlorophyll, mobility of phosphorous, abundant in clay, inhibited by high potassium or calcium',
         'Interveinal chlorosis',
     ],
     [
@@ -51,16 +51,16 @@ const NutrientData = [
     [
         'Boron',
         'Immobile',
-        'Seed and fruit formation, sugar transport',
+        'seed and fruit formation, sugar transport',
         'stunted tips, organ deformity',
     ],
     [
         'Iron',
         'Immobile',
-        'Chlorophll and enzyme production',
+        'chlorophyll and enzyme production',
         'yellow new growth, ivory coloured leaves in severe cases',
     ],
-    ['Copper', 'Immobile', 'metbolism', 'pale green new growth'],
+    ['Copper', 'Immobile', 'metabolism', 'pale green new growth'],
     [
         'Manganese',
         'Immobile',
@@ -76,7 +76,7 @@ const NutrientData = [
     [
         'Molybdenum',
         'Immobile',
-        'Nitrogen cycle',
+        'nitrogen cycle',
         'yellow leaf margins on new growth',
     ],
 ];
@@ -142,6 +142,7 @@ const GlossaryData = [
         'colloid',
         'any substance consisting of particles substantially larger than atoms or ordinary molecules but too small to be visible to the unaided eye',
     ],
+    ['striations', 'parallel scratches in rock caused by glacial movement'],
 ];
 
 const BinomialData = [
@@ -167,11 +168,11 @@ const BinomialData = [
     ['Ginkgo biloba', 'maidenhair tree', ''],
     ['Quercus robur', 'common oak', 'alternate leaves'],
     ['Rudbeckia hirta', 'black-eyed susan', ''],
-    ['Cirsium arvense', 'creeping thistle', 'controlled under weeds act'],
+    ['Cirsium arvense', 'creeping thistle', 'controlled under weeds act 1959'],
     [
         'Fallopia japonica',
         'japanese knotweed',
-        'controlled under weeds act,asbo',
+        'controlled under weeds act 1959,asbo',
     ],
     [
         'Acanthus mollis',
@@ -190,7 +191,11 @@ const BinomialData = [
     ['Rosa gallica', 'gallic rose,french rose,rose of provins', ''],
     ['Hedera helix', 'common ivy', ''],
     ['Senecio vulgaris', 'birdseed,groundsel', 'suffers from rust'],
-    ['Stellaria media', 'common chickweed', ''],
+    [
+        'Stellaria media',
+        'common chickweed',
+        'whitefly,2 spotted mite,cucumber mosaic virus',
+    ],
     ['Cardamine hirsuta', "hairy bittercress,lamb's cress", 'ephemeral'],
     [
         'Fagus sylvatica',
@@ -213,9 +218,9 @@ const BinomialData = [
     [
         'Senecio jacobaea',
         "common ragwort,ragweed,stinking willy,st james's wort",
-        'controlled under weeds act',
+        'controlled under weeds act 1959,toxic to livestock',
     ],
-    ['Cirsium vulgare', 'spear thistle', 'controlled under weeds act'],
+    ['Cirsium vulgare', 'spear thistle', 'controlled under weeds act 1959'],
     ['Arctium minus', 'lesser burdock', ''],
     [
         'Taraxacum officianale',
@@ -294,11 +299,46 @@ const BinomialData = [
         'common comfrey',
         'full sun,partial shade,potassium source',
     ],
-    ['Euonymus europaeus', 'spindle', 'aphis egg host'],
-    ['Rumex crispus', 'curled dock,yellow dock', 'controlled under weeds act'],
+    ['Euonymus europaeus', 'spindle', 'aphid egg host'],
+    [
+        'Rumex crispus',
+        'curled dock,yellow dock',
+        'controlled under weeds act 1959,black bean aphid host',
+    ],
     [
         'Rumex obtusifolius',
         'broad-leaved dock,bitter dock',
-        'controlled under weeds act',
+        'controlled under weeds act 1959,black bean aphid host',
     ],
+    [
+        'Gallium odoratum',
+        'sweet woodruff',
+        'pollinator friendly,shade tolerant',
+    ],
+    ['Pteridium aquilinum', 'bracken', ''],
+    [
+        'Heracleum mantegazzianum',
+        'giant hogweed',
+        'controlled under wildlife and countryside act',
+    ],
+    ['Pseudotsuga menziesii', 'douglas fir', 'full sun,evergreen'],
+    ['Lythrum salicaria', 'purple loosestrife', 'pollinator friendly,full sun'],
+    [
+        'Hemerocallis lilioasphodelus',
+        'yellow daylily',
+        'full sun,heat tolerant',
+    ],
+    ['Taxodium distichum', 'swamp cypress', 'waterlogged tolerant'],
+    ['Sinapis arvensis', 'charlock', 'clubroot,white blister rust'],
+    ['Pinus aristata', 'bristlecone pine', ''],
+    ['Crocus Sativus', 'saffron crocus', 'full sun'],
+    [
+        'Ranunculus ficaria',
+        'spring celandine',
+        'pollinator friendly,full shade',
+    ],
+    ['Ranunculus repens', 'creeping buttercup', 'potentially invasive'],
+    ['Lactuca sativa', 'common lettuce', ''],
+    ['Lactuca seriola', 'prickly lettuce,compass plant', ''],
+    ['Saxifraga granulata', 'meadow saxifrage', ''],
 ];
