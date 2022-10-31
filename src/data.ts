@@ -331,7 +331,7 @@ const BinomialData = [
     ['Taxodium distichum', 'swamp cypress', 'waterlogged tolerant'],
     ['Sinapis arvensis', 'charlock', 'clubroot,white blister rust'],
     ['Pinus aristata', 'bristlecone pine', ''],
-    ['Crocus Sativus', 'saffron crocus', 'full sun'],
+    ['Crocus sativus', 'saffron crocus', 'full sun'],
     [
         'Ranunculus ficaria',
         'spring celandine',
@@ -339,6 +339,7 @@ const BinomialData = [
     ],
     ['Ranunculus repens', 'creeping buttercup', 'potentially invasive'],
     ['Lactuca sativa', 'common lettuce', ''],
-    ['Lactuca seriola', 'prickly lettuce,compass plant', ''],
+    ['Lactuca serriola', 'prickly lettuce,compass plant', ''],
     ['Saxifraga granulata', 'meadow saxifrage', ''],
+    ['Medicago sativa', 'alfalfa', 'green manure'],
 ];
